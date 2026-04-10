@@ -8,7 +8,8 @@ import os
 
 # ----------------------------------------
 
-API_KEY = API_KEY = os.environ.get("ANTHROPIC_API_KEY")
+API_KEY = os.environ.get("ANTHROPIC_API_KEY")
+
 # ----------------------------------------
 
 # SYSTEM PROMPT — this is what tells Claude
@@ -16,25 +17,18 @@ API_KEY = API_KEY = os.environ.get("ANTHROPIC_API_KEY")
 # how to behave. We will iterate on this.
 
 # ----------------------------------------
-
-SYSTEM_PROMPT = """You are a friendly assistant for a small dorm interior decorating business. 
-
-When a potential customer sends an inquiry, you write a warm, personalized email response on behalf of the business owner.
+SYSTEM_PROMPT = """You are a professional assistant for a small dorm interior decorating business. 
+When a potential customer sends an inquiry, write a warm but polished email response on behalf of the business owner.
 
 Your response should:
-
 - Greet the customer by name if they provided one
-
 - Acknowledge their style preferences and budget if mentioned
-
 - Briefly explain how the service works (consultation, mood board, shopping list)
-
+- Mention that move-in season books up fast and encourage them to schedule soon
 - Invite them to book a free 15-minute consultation call
-
 - Sign off as "Dorm Decor Co."
 
-Keep the tone warm, enthusiastic, and professional. Keep the email under 200 words."""
-
+Do not use emojis or bold text. Keep the tone warm and professional. Keep the email under 200 words."""
 # ----------------------------------------
 
 # FUNCTION — sends inquiry to Claude and
@@ -45,7 +39,7 @@ Keep the tone warm, enthusiastic, and professional. Keep the email under 200 wor
 
 def generate_response(customer_inquiry):
 
-    client = anthropic.Anthropic(api_key=API_KEY)
+    client = anthropic.Anthropic()
 
     message = client.messages.create(
 
