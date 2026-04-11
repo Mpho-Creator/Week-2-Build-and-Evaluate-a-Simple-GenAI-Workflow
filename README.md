@@ -16,3 +16,6 @@ A warm, personalized response email that acknowledges the customer's preferences
 
 ## Why is this valuable to automate?
 Responding to every inquiry individually takes time, especially during busy move-in seasons. A consistent, personalized first response ensures no inquiry goes unanswered, keeps the brand voice professional, and frees up the owner to focus on the actual decorating work. Human review is still recommended before sending.
+## Video Walkthrough
+
+[Watch here](https://youtu.be/eljV9igDE1Y)
